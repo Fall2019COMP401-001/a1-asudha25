@@ -9,7 +9,7 @@ public class A1Example {
 		// you know what Eclipse thinks it is using and
 		// so that you can confirm that it is 10.0 or higher.
 		
-		System.out.println("Your Java version: " + System.getProperty("java.version"));
+		// System.out.println("Your Java version: " + System.getProperty("java.version"));
 		
 		// Set up scanner object to read space-separated values
 		// from console input
@@ -36,7 +36,6 @@ public class A1Example {
 		scan.close();
 		
 		// Use helper functions to calculate sum, min, and max
-		
 		int sum = calculateValueSum(values);
 		int min = findValueMin(values);
 		int max = findValueMax(values);
@@ -60,7 +59,7 @@ public class A1Example {
 	 * Input array must not be null.
 	 */
 	
-	static int calculateValueSum(int[] vals) {
+	 static int calculateValueSum(int[] vals) {
 		
 		int sum = 0;
 		
@@ -82,17 +81,17 @@ public class A1Example {
 	 * Input array must not be null and must contain at least one value.
 	 */
 	
-	static int findValueMin(int[] vals) {
+	static int findValueMin(int[] abc) {
 		
 		// Initialize current minimum to first value in array.
-		int cur_min = vals[0];
+		int cur_min = abc[0];
 		
 		// Starting with second value (if any), compare each value
 		// in array with current minimum and replace if smaller.
 		
-		for (int i=1; i < vals.length; i++) {
-			if (vals[i] < cur_min) {
-				cur_min = vals[i];
+		for (int i=1; i < abc.length; i++) {
+			if (abc[i] < cur_min) {
+				cur_min = abc[i];
 			}
 		}
 		
