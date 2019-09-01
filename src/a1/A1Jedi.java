@@ -30,6 +30,7 @@ public class A1Jedi {
 		for (int j=0; j<amount_of_customers; j++) {
 			String first_name = scan.next();
 			String last_name = scan.next(); 
+			int[] array_for_each_customer = new int[amount_of_groceries];
 			int number_of_items = scan.nextInt();
 			//this for loop is to give me a list of items and how much there are of each
 			double total_amount = 0;
@@ -39,7 +40,10 @@ public class A1Jedi {
 				//this for loop is to match the items with the initial array and add the values to my arrays   
 				for (int l=0; l<amount_of_groceries; l++) {
 					if (type_of_item.equals(names_of_items[l])){
-						number_of_customers[l] += 1;
+						if(array_for_each_customer[l] == 0) {
+						 number_of_customers[l] += 1;
+						 array_for_each_customer[l] = 1; 
+						}
 						number_bought_by_customers [l] += amount_of_items;
 						break;
 
